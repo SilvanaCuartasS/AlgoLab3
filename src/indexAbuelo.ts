@@ -8,10 +8,6 @@ class AppContainer extends HTMLElement {
     constructor() {
         super();
         this.attachShadow({mode:"open"})
-    }
-
-    connectedCallback() {
-        this.render();
         workers.forEach((element) => {
             const employeeCard = this.ownerDocument.createElement("worker-component") as Employee;
             employeeCard.setAttribute(Attribute.image, element.image);
@@ -27,6 +23,10 @@ class AppContainer extends HTMLElement {
             console.log(this.arrayEmployee);
             
         });
+    }
+
+    connectedCallback() {
+        this.render();
     }
 
     render() {
