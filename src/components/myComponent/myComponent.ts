@@ -70,7 +70,6 @@ class Employee extends HTMLElement {
             this.shadowRoot.innerHTML = 
             `
             <link rel="stylesheet" href="../src/components/myComponent/myComponent.css">
-
             <section>
 
             <div id="card">

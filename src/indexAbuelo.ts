@@ -29,19 +29,25 @@ class AppContainer extends HTMLElement {
         this.render();
     }
 
-    render() {
-        if (this.shadowRoot) {
-            this.shadowRoot.innerHTML = 
-            `
-            <h1>Haloooo</h1>
-            `
+    render(){
+        if(this.shadowRoot){
+            this.shadowRoot.innerHTML = `
+            <link rel="stylesheet" href="../src/styles.css">
+            `;
+
+            const container = document.createElement('div');
+            container.classList.add('container');
+
             const filter = this.arrayEmployee.filter(element => Number(element.uid) % 2 === 0);
 
             filter.forEach((element) => {
-                this.shadowRoot?.appendChild(element);
-            })
+                container.appendChild(element);
+            });
+
+            this.shadowRoot.appendChild(container);
         }
     }
 }
+
 
 customElements.define("app-container", AppContainer)
