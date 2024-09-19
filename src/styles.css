@@ -3,4 +3,9 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items:center;
-    }
+}
+
+div {
+    justify-content: center;
+    display: flex;
+}

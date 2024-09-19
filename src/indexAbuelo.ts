@@ -33,6 +33,9 @@ class AppContainer extends HTMLElement {
         if(this.shadowRoot){
             this.shadowRoot.innerHTML = `
             <link rel="stylesheet" href="../src/styles.css">
+            
+        <div><h1>Workers</h1></div>
+            
             `;
 
             const container = document.createElement('div');
